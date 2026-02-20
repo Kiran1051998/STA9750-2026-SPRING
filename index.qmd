@@ -1,0 +1,88 @@
+---
+title: "STA 9750 – Kiran Rao Narsipur"
+---
+
+## About Me
+
+I am an analytics and data engineering professional focused on building scalable, finance-grade data systems for **private equity and private credit organizations**. My work centers on translating complex financial and operational data into **accurate, auditable, executive-ready metrics** used for investment oversight, forecasting, and strategic decision-making.
+
+I will next start a job at **HPS / BlackRock** in a data engineering focused role supporting investment and finance stakeholders. My long-term goal is to operate at the intersection of **data engineering, financial analytics, and investment strategy**, combining rigorous technical systems with deep financial domain expertise.
+
+I am currently pursuing a **Master of Science in Business Analytics at Baruch College (CUNY)** and plan to further strengthen my profile by completing the **CFA Program** alongside **AWS Data Engineering certifications**, with the objective of bridging institutional finance and modern data platforms.
+
+This site hosts coursework and analytical projects completed for **STA 9750: Special Topics in Statistical Analysis**.
+
+---
+
+## Professional Summary
+
+Analytics professional with experience designing and automating financial reporting, ARR analytics, and data pipelines for **$100M+ SaaS portfolios** backed by private equity sponsors. Proven ability to connect **data warehousing, BI, and Python automation** to business strategy, delivering trusted metrics for CFOs, finance teams, and investment partners.
+
+---
+
+## Core Competencies
+
+- Financial analytics & KPI design (ARR, GRR, NRR, retention, forecasting)
+- Data modeling and warehouse design for finance use cases
+- Executive and board-level reporting
+- Analytics engineering and automation
+- Cross-functional stakeholder partnership
+
+---
+
+## Technical Skills
+
+**Analytics & BI**  
+Power BI, DAX, Power Query, Excel, SQL
+
+**Programming & Data Processing**  
+Python (NumPy, Pandas, Requests, Scikit-learn), R
+
+**Data Platforms & Cloud**  
+Snowflake, BigQuery, dbt, GitHub
+
+---
+
+## Professional Experience
+
+### Senior Financial Data Analyst  
+**WebPT – Healthcare SaaS** | New York, NY  
+*August 2024 – November 2025*
+
+- Supported FP&A by building automated reporting and data products used for **private equity oversight and portfolio monitoring** by Warburg Pincus.  
+- Partnered directly with the CFO and finance leadership on strategic reporting, improving forecast visibility across a **$100M+ ARR SaaS portfolio**.  
+- Led the management and evolution of the Finance Power BI environment, reducing monthly reporting turnaround time by **70%**.  
+- Designed and implemented Snowflake-based pipelines for **ARR, GRR, NRR, loss retention, logo retention**, and cohort-based analysis across product lines.  
+- Built version-controlled ARR Bridge and Phantom Churn logic, uncovering **17% previously undetected churn** and improving period-over-period reconciliation.  
+- Collaborated with Finance, Product, and Customer Success to integrate revenue and usage data for EMR and RCM product performance insights.
+
+---
+
+### Data Analyst – Business Intelligence  
+**CyberMaxx – Cybersecurity MDR** | New York, NY  
+*June 2019 – August 2024*
+
+- Delivered recurring financial and operational reporting supporting **private equity oversight** of company growth and performance.  
+- Reported to the SVP of Finance and led cross-functional sessions with senior finance and technical stakeholders to align on metric definitions and data quality.  
+- Designed and maintained end-to-end ETL pipelines using Python to support analytics, forecasting, and operational dashboards.  
+- Built and managed enterprise Power BI reporting across ARR, sales forecasting, pipeline analysis, product performance, and customer segmentation.  
+- Centralized and automated client reporting, reducing delivery time by **80%** and improving consistency across customer-facing analytics.
+
+---
+
+## Education
+
+**City University of New York (CUNY) – Baruch College**  
+Master of Science in Business Analytics  
+*Expected Graduation: December 2026*
+
+**State University of New York (SUNY) College at Oneonta**  
+Bachelor of Science in Business Economics (Finance)  
+Honors: Dean’s List, Chi Alpha Sigma Academic Honor Society  
+Varsity Tennis – Team Captain
+
+---
+
+```{r}
+#| include: false
+1 + 1
