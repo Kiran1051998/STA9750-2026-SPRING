@@ -6,7 +6,7 @@ title: "STA 9750 – Kiran Rao Narsipur"
 
 I am an analytics and data engineering professional focused on building scalable, finance-grade data systems for **private equity and private credit organizations**. My work centers on translating complex financial and operational data into **accurate, auditable, executive-ready metrics** used for investment oversight, forecasting, and strategic decision-making.
 
-I will next start a job at **HPS / BlackRock** in a data engineering focused role supporting investment and finance stakeholders. My long-term goal is to operate at the intersection of **data engineering, financial analytics, and investment strategy**, combining rigorous technical systems with deep financial domain expertise.
+I will soon start a job at **HPS / BlackRock** in a data engineering focused role supporting investment and finance stakeholders. My long-term goal is to operate at the intersection of **data engineering, financial analytics, and investment strategy**, combining rigorous technical systems with deep financial domain expertise.
 
 I am currently pursuing a **Master of Science in Business Analytics at Baruch College (CUNY)** and plan to further strengthen my profile by completing the **CFA Program** alongside **AWS Data Engineering certifications**, with the objective of bridging institutional finance and modern data platforms.
 
@@ -33,7 +33,7 @@ Analytics professional with experience designing and automating financial report
 ## Technical Skills
 
 **Analytics & BI**  
-Power BI, DAX, Power Query, Excel, SQL
+Power BI, DAX, Power Query, Excel, SQL, LINQ, Codex
 
 **Programming & Data Processing**  
 Python (NumPy, Pandas, Requests, Scikit-learn), R
