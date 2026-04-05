@@ -1,0 +1,323 @@
+---
+title: "Mini-Project #02: How Do You Do 'You Do You'?"
+author: "Kiran Narsipur"
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    code-fold: true
+execute:
+  warning: false
+  message: false
+  echo: true
+---
+
+```{r}
+library(tidyverse)
+library(glue)
+library(httr2)
+library(gt)
+library(scales)
+library(forcats)
+library(knitr)
+```
+
+# Introduction
+
+The American Time Use Survey (ATUS) provides a detailed view of how Americans allocate time across work, sleep, household tasks, leisure, education, caregiving, and travel. In this report, I use ATUS microdata from 2003 through 2024 to study how daily time use varies across demographic groups and life stages.
+
+My goal is to combine respondent-level demographic information with activity-level records in order to understand how age, sex, family structure, employment, and school enrollment shape everyday routines in the United States.
+
+Across more than 250,000 ATUS respondents, the results show that daily routines vary meaningfully by age and family role. Household work stays fairly stable across most age groups, though it rises somewhat in later adulthood before dipping among the oldest respondents. The results also suggest that employment status and parenting responsibilities shape time use in visible ways, especially in areas like lawn care, household maintenance, and child-focused activities.
+
+# Data Acquisition
+
+```{r}
+load_atus_data <- function(file_base = c("resp", "rost", "act")) {
+  if (!dir.exists(file.path("data", "mp02"))) {
+    dir.create(file.path("data", "mp02"), recursive = TRUE)
+  }
+
+  file_base <- match.arg(file_base)
+
+  file_name_out <- file.path("data", "mp02", glue("atus{file_base}_0324.dat"))
+
+  if (!file.exists(file_name_out)) {
+    url_end <- glue("atus{file_base}-0324.zip")
+
+    temp_zip <- tempfile(fileext = ".zip")
+    temp_dir <- tools::file_path_sans_ext(temp_zip)
+
+    request("https://www.bls.gov") |>
+      req_url_path("tus", "datafiles", url_end) |>
+      req_headers(`User-Agent` = "Mozilla/5.0") |>
+      req_perform(path = temp_zip)
+
+    unzip(temp_zip, exdir = temp_dir)
+
+    file.copy(
+      file.path(temp_dir, basename(file_name_out)),
+      file_name_out,
+      overwrite = TRUE
+    )
+  }
+
+  file <- read_csv(file_name_out, show_col_types = FALSE)
+
+  switch(
+    file_base,
+
+    resp = file |>
+      rename(
+        participant_id = TUCASEID,
+        survey_weight = TUFNWGTP,
+        survey_year = TUYEAR,
+        time_alone = TRTALONE,
+        children_in_home = TRCHILDNUM,
+        spouse_present = TRSPPRES,
+        labor_force_status = TELFS,
+        enrolled_school = TESCHENR,
+        school_level = TESCHLVL
+      ),
+
+    rost = file |>
+      rename(
+        participant_id = TUCASEID,
+        line_number = TULINENO,
+        age = TEAGE
+      ) |>
+      mutate(
+        sex = case_when(
+          TESEX == 1 ~ "Male",
+          TESEX == 2 ~ "Female",
+          TRUE ~ NA_character_
+        )
+      ),
+
+    act = file |>
+      rename(
+        participant_id = TUCASEID,
+        where_code = TEWHERE
+      ) |>
+      mutate(
+        activity_n_of_day = TUACTIVITY_N,
+        time_spent_min = TUACTDUR24,
+        start_time = TUSTARTTIM,
+        stop_time = TUSTOPTIME,
+        level1_code = paste0(TRTIER1P, "0000"),
+        level2_code = paste0(TRTIER2P, "00"),
+        level3_code = TRCODEP
+      )
+  )
+}
+
+load_atus_activities <- function() {
+  dest_file <- file.path("data", "mp02", "atus_activity_codes.csv")
+
+  if (!file.exists(dest_file)) {
+    download.file(
+      "https://michael-weylandt.com/STA9750/mini/atus_activity_codes.csv",
+      destfile = dest_file,
+      mode = "wb",
+      quiet = TRUE
+    )
+  }
+
+  read_csv(dest_file, show_col_types = FALSE)
+}
+
+resp <- load_atus_data("resp")
+rost <- load_atus_data("rost")
+act <- load_atus_data("act")
+activities <- load_atus_activities()
+```
+
+```{r}
+respondent_demo <- rost |>
+  filter(line_number == 1) |>
+  select(participant_id, age, sex)
+
+atus_resp <- resp |>
+  left_join(respondent_demo, by = "participant_id") |>
+  mutate(
+    children_in_home = if_else(children_in_home < 0, NA_real_, children_in_home),
+
+    married = case_when(
+      spouse_present == 1 ~ "Married",
+      TRUE ~ "Not Married"
+    ),
+
+    retired = labor_force_status == 5,
+
+    employment_status = case_when(
+      labor_force_status %in% c(1, 2) ~ "Employed",
+      labor_force_status == 3 ~ "Unemployed",
+      labor_force_status == 4 ~ "Not in Labor Force",
+      labor_force_status == 5 ~ "Retired",
+      TRUE ~ "Other"
+    ),
+
+    college_student = enrolled_school == 1 & school_level %in% c(4, 5),
+
+    age_group = cut(
+      age,
+      breaks = c(15, 25, 35, 45, 55, 65, 80, Inf),
+      labels = c("15-24", "25-34", "35-44", "45-54", "55-64", "65-79", "80+"),
+      right = FALSE
+    )
+  )
+
+atus_full <- act |>
+  left_join(atus_resp, by = "participant_id") |>
+  left_join(activities, by = c("level3_code" = "code_level3")) |>
+  mutate(hours_spent = time_spent_min / 60)
+```
+
+# Inline Questions
+
+## How many respondents are in the dataset?
+
+```{r}
+n_respondents <- n_distinct(atus_resp$participant_id)
+n_respondents
+```
+
+There are `r comma(n_respondents)` respondents in the dataset.
+
+## How many different sports can respondents report watching?
+
+```{r}
+sports_count <- activities |>
+  filter(
+    str_detect(str_to_lower(task_level3), "watch"),
+    str_detect(str_to_lower(task_level3), "sport")
+  ) |>
+  summarize(n = n()) |>
+  pull(n)
+
+sports_count
+```
+
+ATUS includes `r sports_count` distinct sports-watching activities.
+
+## What percent of Americans are retired?
+
+```{r}
+retired_pct <- atus_resp |>
+  summarize(pct = weighted.mean(retired, survey_weight, na.rm = TRUE) * 100) |>
+  pull(pct)
+
+retired_pct
+```
+
+Approximately `r round(retired_pct, 1)`% of Americans are retired.
+
+## How much sleep does the average American get?
+
+```{r}
+avg_sleep <- atus_full |>
+  filter(task_level2 == "Sleeping") |>
+  summarize(avg = weighted.mean(hours_spent, survey_weight, na.rm = TRUE)) |>
+  pull(avg)
+
+avg_sleep
+```
+
+The average American sleeps `r round(avg_sleep, 2)` hours per day.
+
+# Table Question
+
+## Lawn Care by Employment Status
+
+```{r}
+lawn_table <- atus_full |>
+  filter(str_detect(str_to_lower(task_level3), "lawn")) |>
+  filter(employment_status %in% c("Retired", "Employed")) |>
+  group_by(employment_status) |>
+  summarize(
+    avg_hours = weighted.mean(hours_spent, survey_weight, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  mutate(avg_hours = round(avg_hours, 2))
+
+kable(lawn_table)
+```
+
+The difference between retirees and employed respondents is fairly small, but employed respondents in this output spend slightly more time on lawn care. One possible explanation is that lawn work is an intermittent household task shaped more by homeownership and seasonality than by labor force status alone. It may also reflect that employed respondents who do lawn care tend to do it in concentrated blocks of time on the days they report it.
+
+# Graph Question
+
+## Household Activities by Age
+
+```{r}
+household_data <- atus_full |>
+  filter(
+    str_detect(str_to_lower(task_level3), "clean|laundry|food|housework")
+  ) |>
+  group_by(age_group) |>
+  summarize(
+    avg_hours = weighted.mean(hours_spent, survey_weight, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ggplot(household_data, aes(age_group, avg_hours, group = 1)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 3) +
+  labs(
+    title = "Household Activities by Age Group",
+    x = "Age Group",
+    y = "Average Hours Per Day"
+  ) +
+  theme_minimal()
+```
+
+Household activity time is fairly stable across the life course, with only modest variation from one age group to the next. The lowest levels appear among adults in the 25–44 range, while the highest level appears among respondents ages 65–79. After that, household time drops again for the 80+ group, which makes intuitive sense because very old adults may reduce physically demanding household tasks.
+
+# Product Team Deliverable
+
+## Stay-at-Home Dads
+
+```{r}
+stay_home_dads <- atus_full |>
+  filter(
+    sex == "Male",
+    married == "Married",
+    children_in_home > 0,
+    employment_status != "Employed"
+  )
+
+stay_home_dad_summary <- stay_home_dads |>
+  filter(
+    str_detect(
+      str_to_lower(task_level3),
+      "child|sleep|television|food|exercise"
+    )
+  ) |>
+  group_by(task_level3) |>
+  summarize(
+    typical_hours = median(hours_spent, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(desc(typical_hours))
+
+kable(stay_home_dad_summary, digits = 2)
+```
+
+The median activity profile suggests that stay-at-home dads divide their days across sleep, childcare, media consumption, and food-related tasks. Sleeping is the single largest activity in the summary, while several child-centered activities such as sports, events, supervision, and school-related involvement also appear prominently. Taken together, the results suggest that caregiving is not limited to one narrow task, but instead spreads across many parts of the day, from direct care to transportation, event attendance, and educational support.
+
+# Conclusion
+
+Overall, this analysis shows that time use is shaped by both demographic position and household role. Age patterns in household work are present but not dramatic, while family structure and caregiving responsibilities appear more strongly in the subgroup analysis. The stay-at-home dads example in particular shows how time use data can reveal a day made up of many small but meaningful forms of labor rather than just one dominant responsibility.
+
+# Appendix
+
+```{r}
+sessionInfo()
+```
+
+::: {.callout-note title="AI Usage Statement" collapse="true"}
+
+For this assignment, I used generative AI tools to help debug R code, troubleshoot data-loading errors, and generate an initial Quarto document structure. I also used AI to help draft code for cleaning, joining, and analyzing the ATUS datasets. All analyses, variable choices, interpretations, and final written conclusions were reviewed, modified, and verified by me before submission.
+
+:::
