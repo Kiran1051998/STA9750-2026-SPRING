@@ -1,0 +1,201 @@
+
+peer_feedback_assignment_1:
+  issue_number: 24
+  issue_owner: izabellediaz20
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: It captured the assignement requirements well
+    negative: There is no formatting on the webpage
+    advice: Adding formatting the web page
+  scores:
+    Written Communication:
+      score: 8.0
+      comment: All of the text feels well thought out and in line with the project
+        expectations
+    Project Skeleton:
+      score: 7.0
+      comment: The skeleton seems to be structurd well and nicely thought out
+    Tables & Document Presentation:
+      score: 8.0
+      comment: All the tables are formatted properly and presented well
+    Data Visualization:
+      score: 10.0
+      comment: All the visuals look like they were well used
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 9.0
+      comment: The code syntax seems to be in line with what was taught in class
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 10.0
+      comment: The analysis was relevant to the findings in the data
+    Extra Credit:
+      score: 0.0
+      comment: it doesn't seem like any was done
+  mp_number: 1
+peer_feedback_assignment_2:
+  issue_number: 29
+  issue_owner: jackeee101
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: The Op-Ed section is a strong highlight, as it clearly interprets the
+      data and connects it to a real-world policy discussion in a meaningful way.
+    negative: The code could be made more efficient and readable by consolidating
+      repeated transformations and improving organization.
+    advice: Combine repeated mutate() statements into a single step, and enhance table
+      formatting with clearer labels and summaries to improve readability.
+  scores:
+    Written Communication:
+      score: 7.0
+      comment: The writing is clear and easy to follow, and the Op-Ed does a good
+        job connecting the analysis to the SFFA decision. However, some sections are
+        a bit repetitive and could benefit from more concise explanations and stronger
+        transitions between ideas.
+    Project Skeleton:
+      score: 7.0
+      comment: The project follows the expected structure and completes all required
+        tasks. One improvement would be reducing repeated mutate() steps by combining
+        them into a single transformation to make the code more efficient and readable.
+    Tables & Document Presentation:
+      score: 7.0
+      comment: The tables are functional and display the required results clearly.
+        To improve presentation, adding clearer titles, captions, or formatting enhancements
+        would make them more polished.
+    Data Visualization:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 7.0
+      comment: The code is generally correct and uses appropriate dplyr pipelines.
+        However, there is some redundancy (multiple sequential mutate() calls) that
+        could be streamlined for better efficiency and clarity.
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 8.0
+      comment: The analysis answers the required questions and includes thoughtful
+        interpretation in the Op-Ed. It could be strengthened by more explicitly linking
+        the findings back to the SFFA decision and discussing potential limitations
+        of the analysis.
+    Extra Credit:
+      score: 0.0
+      comment: no extra credit was done
+  mp_number: 1
+peer_feedback_assignment_3:
+  issue_number: 42
+  issue_owner: er0driguez
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: The Op-Ed is a standout feature, combining strong narrative writing
+      with data-driven insights and effective use of inline values.
+    negative: Some parts of the code and analysis are slightly repetitive, and could
+      be streamlined for better efficiency and clarity.
+    advice: Refactor repeated calculations into reusable transformations and consider
+      adding brief summaries after key outputs to guide the reader.
+  scores:
+    Written Communication:
+      score: 9.0
+      comment: The writing is clear, engaging, and well-structured, especially in
+        the Op-Ed section which connects the analysis to real-world implications effectively.
+        The narrative flows well, though a few sections could be slightly more concise
+        to improve readability.
+    Project Skeleton:
+      score: 8.0
+      comment: The project is very well organized and follows a clear structure from
+        data acquisition through analysis and interpretation. The use of modular code
+        and consistent pipelines makes the workflow easy to follow.
+    Tables & Document Presentation:
+      score: 9.0
+      comment: The tables are well-formatted and visually polished, with clear labels
+        and thoughtful use of formatting. The addition of styling and summaries improves
+        readability and gives the document a professional look.
+    Data Visualization:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 8.0
+      comment: The code is clean, well-structured, and uses tidyverse functions effectively.
+        There is good use of across() and pipelines, though some repeated calculations
+        could be abstracted into reusable steps for efficiency.
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 8.0
+      comment: The analysis is thoughtful and goes beyond basic requirements by connecting
+        trends to both SFFA and comparisons with other institutions. The interpretation
+        is strong, though briefly discussing limitations or assumptions would strengthen
+        the conclusions.
+    Extra Credit:
+      score: 1.0
+      comment: This submission includes a well-formatted visualization that supports
+        the Op-Ed analysis, so 1 point of extra credit is awarded.
+  mp_number: 1
+peer_feedback_assignment_4:
+  issue_number: 44
+  issue_owner: jalfred259806
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: |2-
+
+      The submission successfully completes all required tasks and provides clear, correct outputs for each question.
+    negative: The project lacks visualizations and more advanced analysis, which limits
+      the depth and engagement of the findings.
+    advice: Add at least one well-designed visualization and reduce repetition in
+      the code by consolidating calculations into fewer steps.
+  scores:
+    Written Communication:
+      score: 6.0
+      comment: The writing is clear and understandable, and the Op-Ed communicates
+        the main ideas effectively. However, the narrative is more basic and could
+        benefit from stronger transitions and more engaging or nuanced explanations.
+    Project Skeleton:
+      score: 7.0
+      comment: The project follows the required structure and completes all core tasks.
+        While everything is present, the workflow is more straightforward and could
+        be improved with better organization or modularization of repeated steps.
+    Tables & Document Presentation:
+      score: 7.0
+      comment: The tables present the required information clearly, but the formatting
+        is relatively simple. Adding more styling, clearer titles, or improved layout
+        would enhance the overall presentation.
+    Data Visualization:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 7.0
+      comment: The code is functional and follows tidyverse conventions, but there
+        is noticeable repetition and some inefficiencies. Refactoring repeated calculations
+        into reusable transformations would improve clarity and performance.
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 6.0
+      comment: The analysis answers the required questions and provides reasonable
+        interpretation. However, it remains somewhat surface-level and could be strengthened
+        by deeper insights or stronger connections to the SFFA decision.
+    Extra Credit:
+      score: 0.0
+      comment: No extra credit components appear to be included
+  mp_number: 1
+evaluator: kiran1051998
+

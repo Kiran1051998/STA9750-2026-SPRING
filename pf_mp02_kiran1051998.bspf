@@ -1,0 +1,171 @@
+peer_feedback_assignment_1:
+  issue_number: 49
+  issue_owner: kevmarcel0
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: One notable strength was the organization and structure of the report—the
+      author clearly separated the assignment into required sections and used a strong
+      mix of inline values, tables, and visualizations to answer the prompts.
+    negative: One area for improvement would be expanding the final deliverable section
+      to more fully address all three required target demographics and provide more
+      detailed interpretation of the results.
+    advice: The submission could be improved by completing the full final deliverable
+      for all three target demographics, using survey-weighted averages consistently
+      throughout the analysis, and adding a bit more polish and interpretation to
+      the tables and visualizations.
+  scores:
+    Written Communication:
+      score: 8.0
+      comment: It was written well
+    Project Skeleton:
+      score: 8.0
+      comment: Was organized in a clear and understanding way
+    Tables & Document Presentation:
+      score: 8.0
+      comment: The tables are clean, readable, and use gt effectively with appropriate
+        titles and subtitles. The document is well-structured and visually easy to
+        navigate.
+    Data Visualization:
+      score: 8.0
+      comment: The plots are relevant, readable, and help answer the assignment questions.
+        They include clear labels and titles, and the bump plot and age-group analyses
+        are especially effective. Additional polish and styling could strengthen them
+        further, but they are solid overall.
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 8.0
+      comment: The code is organized, readable, and generally easy to follow. Variable
+        names are clear and the joins and transformations are implemented logically
+        throughout the report.
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 8.0
+      comment: The analysis demonstrates a good understanding of the ATUS data and
+        the major trends in the assignment. The conclusions are reasonable and supported
+        by the data, particularly in the sections on household activities, education,
+        and childcare time.
+    Extra Credit:
+      score: 0.0
+      comment: he didn't do any
+  mp_number: 2
+peer_feedback_assignment_2:
+  issue_number: 53
+  issue_owner: khushwant-khatri590
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: One notable strength is how complete and polished the final deliverable
+      section is—the three demographic profiles are thoughtful, clearly defined, and
+      directly connected to the time-tracking app scenario.
+    negative: One area for improvement would be adding slightly more stylistic polish
+      and perhaps captions or annotations to a few of the graphs to make the visual
+      findings even clearer.
+    advice: The submission could be improved by adding more detailed annotations or
+      labels to the visualizations and including the second optional extra credit
+      item, such as the Apple Watch–style ring visualization.
+  scores:
+    Written Communication:
+      score: 9.0
+      comment: The report is very clearly written and organized, with strong explanations
+        and smooth transitions between sections. The narrative consistently explains
+        why each analysis matters and ties the results back to the larger project
+        goals.
+    Project Skeleton:
+      score: 10.0
+      comment: The submission fully completes all required tasks and includes all
+        of the required components, including the three target demographic profiles,
+        tables, graphs, inline values, AI statement, and the data relationship explanation.
+    Tables & Document Presentation:
+      score: 9.0
+      comment: The tables are polished and easy to read, with effective use of gt,
+        good formatting, and clear titles and subtitles. The overall document is visually
+        strong and easy to navigate.
+    Data Visualization:
+      score: 8.0
+      comment: The visualizations are informative and relevant, with clear labels
+        and appropriate chart types. A few of the graphs could be polished further
+        stylistically, but they still communicate the findings well.
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 9.0
+      comment: The code is organized, well-commented, and easy to follow throughout
+        the report. Variable names are clear and the joins, filters, and weighted
+        calculations are implemented thoughtfully.
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 9.0
+      comment: The analysis is thoughtful and convincing, with interpretations that
+        are directly supported by the data. The strongest sections are the discussion
+        of demographic differences and the final product-manager style deliverable.
+    Extra Credit:
+      score: 2.0
+      comment: The submission includes the optional data relationship diagram showing
+        how the ATUS tables connect, so it should receive the corresponding extra
+        credit.
+  mp_number: 2
+peer_feedback_assignment_3:
+  issue_number: 54
+  issue_owner: raulsolanavarro
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: |-
+      One notable strength was the strong organization of the report and the thoughtful way the final deliverable connected the analysis back to the app design scenario.
+      One area for improvement would be adding more detailed interpretation to a few of the graphs and discussing why the observed patterns are important.
+    negative: One area for improvement would be adding more detailed interpretation
+      to a few of the graphs and discussing why the observed patterns are important.
+    advice: The submission could be improved by expanding the written interpretation
+      for the visualizations, adding a little more stylistic polish to the charts,
+      and including one of the optional extra credit components.
+  scores:
+    Written Communication:
+      score: 8.0
+      comment: The report is clearly written and easy to follow, with good organization
+        and understandable explanations throughout. Most sections explain the results
+        effectively, though a few interpretations could go into slightly more depth.
+    Project Skeleton:
+      score: 9.0
+      comment: The submission includes nearly all of the required components and does
+        a strong job addressing each part of the assignment. The structure is complete
+        and the final deliverable section is thoughtfully developed.
+    Tables & Document Presentation:
+      score: 8.0
+      comment: The tables are clean, readable, and formatted well with clear titles
+        and labels. The overall document is visually organized and easy to navigate.
+    Data Visualization:
+      score: 8.0
+      comment: The visualizations are relevant and communicate the main findings clearly.
+        The charts are easy to read and appropriately chosen, although a few could
+        be polished further with stronger annotations or styling.
+    Exploratory Data Analysis:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Code Quality:
+      score: 8.0
+      comment: The code is organized and logical, with clear variable names and a
+        reasonable workflow. The joins, transformations, and weighted summaries are
+        generally implemented well.
+    Data Preparation:
+      score: 10.0
+      comment: DEFAULT SCORE
+    Analysis and Findings:
+      score: 8.0
+      comment: The analysis demonstrates a solid understanding of the ATUS data and
+        draws reasonable conclusions from the results. The interpretations are thoughtful
+        and generally supported by the evidence shown in the report.
+    Extra Credit:
+      score: 0.0
+      comment: The submission does not appear to include either of the optional extra
+        credit items, such as the relationship diagram or ring visualization.
+  mp_number: 2
+evaluator: kiran1051998
+

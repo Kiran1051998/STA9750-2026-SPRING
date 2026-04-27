@@ -1,0 +1,72 @@
+carmine-montaperto:
+  evaluator: kiran1051998
+  teammate: carmine-montaperto
+  n_questions: 5
+  questions:
+    OQ: 5
+    SQ: 5
+    DS: 5
+    RR: 5
+    PR: 5
+  overall_comments:
+    positive: Carmine’s greatest strength was his leadership and ability to keep the
+      team organized, focused, and on schedule.
+    negative: nothing hes great
+    advice: nothing he was awesome
+    instructor: nope
+  cycle: mid
+izabellediaz20:
+  evaluator: kiran1051998
+  teammate: izabellediaz20
+  n_questions: 5
+  questions:
+    OQ: 5
+    SQ: 5
+    DS: 5
+    RR: 5
+    PR: 5
+  overall_comments:
+    positive: Izabelle’s greatest strength was her ability to create a polished, professional
+      presentation design that improved the overall quality of the project.
+    negative: nothing she was great
+    advice: she was great
+    instructor: nope
+  cycle: mid
+kevmarcel0:
+  evaluator: kiran1051998
+  teammate: kevmarcel0
+  n_questions: 5
+  questions:
+    OQ: 5
+    SQ: 5
+    DS: 5
+    RR: 5
+    PR: 5
+  overall_comments:
+    positive: Kevin’s greatest strength was his analytical thinking and his ability
+      to contribute strong ideas and data analysis to the project.
+    negative: nothing was great
+    advice: nothing he was great
+    instructor: nope
+  cycle: mid
+maryononye:
+  evaluator: kiran1051998
+  teammate: maryononye
+  n_questions: 5
+  questions:
+    OQ: 5
+    SQ: 5
+    DS: 5
+    RR: 5
+    PR: 5
+  overall_comments:
+    positive: |-
+      5
+      Mary’s greatest strength was her ability to motivate the team and help keep everyone organized and engaged.
+      nope
+    negative: nothing
+    advice: nothing
+    instructor: nope
+  cycle: mid
+evaluator: kiran1051998
+
