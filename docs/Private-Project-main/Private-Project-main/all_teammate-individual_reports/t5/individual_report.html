@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Group Member 5">
+<meta name="author" content="Kiran Narsipur">
 <meta name="dcterms.date" content="2026-05-12">
 
 <title>Citizen Complaints and Regulatory Response Speed – STA 9750 Submission Material</title>
@@ -4153,7 +4153,7 @@ border: 0;
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Group Member 5 </p>
+             <p>Kiran Narsipur </p>
           </div>
   </div>
     
@@ -4178,6 +4178,7 @@ border: 0;
 <p>The analyses conducted by my teammates establish associations between complaint volume and inspection outcomes, but associations alone cannot tell us whether complaints are an active input into the regulatory process or merely a passive reflection of the same conditions that independently drive inspection outcomes. If complaints are purely passive mirrors of food safety conditions, improving the complaint system would not improve food safety enforcement. But if complaints actively cause inspectors to visit establishments sooner than they otherwise would, then 311 is functioning as a direct channel through which citizen engagement shapes government action. This distinction has enormous practical importance: an active channel can be strengthened, publicized, and targeted to improve enforcement efficiency and equity, while a passive mirror cannot.</p>
 <p>My specific question is whether food-related 311 complaints lead to inspections, and if so, how much faster do post-complaint inspections arrive compared to the baseline inspection cycle that would occur in the absence of any complaint? I test this by matching each food-related 311 complaint to the next inspection occurring in the same ZIP code within 180 days, and comparing the resulting time-to-inspection distribution against the baseline distribution of gaps between consecutive inspections. If complaints are actively accelerating inspection timelines, the post-complaint distribution should be shifted substantially to the left relative to the baseline distribution.</p>
 <p>This analysis is the most mechanistic of the five team reports. Where the other four analyses establish that complaints and outcomes are associated and characterize the nature of that association, this analysis tests for a specific causal mechanism: the acceleration of regulatory response. Finding strong evidence of acceleration would not only confirm that 311 is an active regulatory input but would also provide a partial explanation for the cross-sectional associations documented by my teammates, since more frequent inspections in high-complaint areas would naturally produce more opportunities to identify and record violations.</p>
+<p>Published web version: <a href="https://carmine-montaperto.github.io/STA9750-2026-SPRING/individual_report.html">https://carmine-montaperto.github.io/STA9750-2026-SPRING/individual_report.html</a></p>
 <hr>
 </section>
 <section id="setup" class="level2">
@@ -4311,8 +4312,8 @@ border: 0;
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 1789714 95.6    3422154 182.8  2505948 133.9
-Vcells 7982729 61.0   18792342 143.4 18618049 142.1</code></pre>
+Ncells 1787953 95.5    3427607 183.1  2491140 133.1
+Vcells 7979335 60.9   18787455 143.4 18614655 142.1</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
@@ -4403,8 +4404,8 @@ Vcells 7982729 61.0   18792342 143.4 18618049 142.1</code></pre>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>          used  (Mb) gc trigger  (Mb) max used  (Mb)
-Ncells 2040242 109.0    3422154 182.8  3422154 182.8
-Vcells 8986065  68.6   18792342 143.4 18618049 142.1</code></pre>
+Ncells 2038486 108.9    3427607 183.1  3427607 183.1
+Vcells 8982672  68.6   18787455 143.4 18614655 142.1</code></pre>
 </div>
 </div>
 <p>The baseline inspection gap distribution is right-skewed, with a median of 315 days and a mean of approximately 302 days. The right tail extends to the 730-day upper bound, reflecting the subset of restaurants on longer inspection cycles due to lower assessed risk. The modal inspection gap falls around 200 to 280 days, consistent with the DOHMH’s stated inspection frequency targets for different restaurant risk categories. This baseline distribution is the critical benchmark: any claim that complaints accelerate inspections must be evaluated relative to this 315-day median rather than some arbitrary reference point. An inspection that follows a complaint by 100 days would still represent dramatic acceleration relative to the baseline cycle, even though 100 days might seem like a long time in absolute terms.</p>

@@ -1,0 +1,201 @@
+peer_feedback_assignment_1:
+  issue_number: 68
+  issue_owner: izabellediaz20
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: One notable strength of the submission is the well-structured and robust
+      data preparation process, particularly the implementation of reusable functions
+      to clean and combine complex migration datasets. This demonstrates a strong
+      understanding of data ingestion, transformation, and efficient workflow design.
+    negative: One area where the submission could be improved is the analysis and
+      modeling section, particularly the population projections, which do not fully
+      follow the required methodology. Expanding this section with the correct model
+      and deeper interpretation of results would strengthen the overall impact of
+      the project.
+    advice: Concrete steps to improve the submission would be to implement the required
+      migration-based population model using estimated growth and migration rates
+      instead of a simple growth assumption, and to add 2–3 sentences of interpretation
+      after each major result explaining what it means and why it matters. Additionally,
+      improving visualizations with clear titles, axis labels, and captions would
+      help better communicate the findings.
+  scores:
+    Written Communication:
+      score: 8.0
+      comment: I gave this score because the writing is clear, well-structured, and
+        easy to follow with no major grammatical issues. However, the explanations
+        of key findings lack deeper context and interpretation, especially in later
+        sections.
+    Project Skeleton:
+      score: 7.0
+      comment: I gave this score because most of the required tasks are completed
+        and the overall workflow is present. However, some components, particularly
+        the population projection, do not fully follow the required methodology.
+    Tables & Document Presentation:
+      score: 7.0
+      comment: I gave this score because the tables are organized and readable, and
+        they present relevant information. However, they could be improved with better
+        formatting choices and more thoughtful selection or highlighting of key results.
+    Data Visualization:
+      score: 6.0
+      comment: I gave this score because the visual outputs support the analysis and
+        are functional. However, they lack polish such as titles, labels, and design
+        choices that would make them publication-quality.
+    Exploratory Data Analysis:
+      score: 9.0
+      comment: I gave this score because the EDA thoroughly explores the required
+        questions and correctly uses the datasets to generate meaningful summaries.
+        However, the analysis could be strengthened with deeper interpretation and
+        stronger narrative connections between findings.
+    Code Quality:
+      score: 8.0
+      comment: I gave this score because the code is generally clean, modular, and
+        uses well-structured functions. However, some sections could be improved for
+        readability and consistency, especially in naming and organization.
+    Data Preparation:
+      score: 9.0
+      comment: I gave this score because the data acquisition and cleaning process
+        is thorough, automated, and handles complex datasets effectively. The use
+        of functions and caching demonstrates a strong understanding of best practices.
+    Analysis and Findings:
+      score: 6.0
+      comment: I gave this score because the analysis is directionally correct and
+        produces reasonable outputs. However, it lacks depth and does not fully implement
+        the required modeling approach, limiting the strength of the conclusions.
+    Extra Credit:
+      score: 0.0
+      comment: I did not observe any clear attempt at the extra credit portions of
+        the assignment. The submission focuses on completing the core requirements,
+        and while it is solid, additional visualizations or extended modeling could
+        have been included to earn extra credit.
+  mp_number: 3
+peer_feedback_assignment_2:
+  issue_number: 71
+  issue_owner: helly101-1
+  issue_ok: yes
+  issue_status: OK
+  overall_comments:
+    positive: ''
+    negative: |-
+      One area where the submission could be improved is in further strengthening the narrative interpretation of results, particularly connecting intermediate findings more directly to the final policy recommendations.
+      To improve the submission, the author could add more detailed explanations after key outputs to clearly explain why the results matter and how they support the final conclusions. Additionally, refining visual storytelling by explicitly referencing figures in the written analysis would make the report even stronger.
+    advice: To improve the submission, the author could add more detailed explanations
+      after key outputs to clearly explain why the results matter and how they support
+      the final conclusions. Additionally, refining visual storytelling by explicitly
+      referencing figures in the written analysis would make the report even stronger.
+  scores:
+    Written Communication:
+      score: 9.0
+      comment: I gave this score because the report is very well-written, organized,
+        and flows naturally with strong explanations throughout. The writing clearly
+        communicates the purpose and findings, though some sections could still include
+        slightly deeper interpretation.
+    Project Skeleton:
+      score: 9.0
+      comment: I gave this score because all required tasks are completed thoroughly
+        and correctly, including the population projection and reapportionment modeling.
+        The workflow is complete and demonstrates strong understanding of the assignment
+        requirements.
+    Tables & Document Presentation:
+      score: 8.0
+      comment: I gave this score because the tables are well-formatted, readable,
+        and effectively present key results. However, some tables could be more selectively
+        focused or emphasized to better highlight the most important insights.
+    Data Visualization:
+      score: 8.0
+      comment: I gave this score because the visualizations are clear, labeled, and
+        go beyond basic exploratory plots with good structure and design. However,
+        a few additional enhancements such as more varied chart types or deeper storytelling
+        could further improve them.
+    Exploratory Data Analysis:
+      score: 9.0
+      comment: I gave this score because the EDA is thorough, answers all required
+        questions, and demonstrates strong understanding of the datasets. The analysis
+        identifies meaningful patterns and supports the overall narrative effectively.
+    Code Quality:
+      score: 8.0
+      comment: I gave this score because the code is well-structured, modular, and
+        makes good use of functions and pipelines. However, some sections could be
+        simplified or made more consistent for improved readability.
+    Data Preparation:
+      score: 9.0
+      comment: I gave this score because the data acquisition and cleaning process
+        is fully automated, efficient, and handles multiple complex data sources effectively.
+        The use of caching and structured functions reflects strong best practices.
+    Analysis and Findings:
+      score: 8.0
+      comment: I gave this score because the analysis is well-developed, correctly
+        implements the required modeling approach, and produces reasonable and insightful
+        results. However, some conclusions could be further expanded or justified
+        in greater detail.
+    Extra Credit:
+      score: 3.0
+      comment: I am awarding this extra credit because the submission includes additional
+        work beyond the core requirements, such as extended modeling and discussion
+        of expanding the House. These additions demonstrate extra effort and deeper
+        engagement with the material.
+  mp_number: 3
+peer_feedback_assignment_3:
+  issue_number: 76
+  issue_owner: kevmarcel0
+  issue_ok: no
+  issue_status: Could not locate your AI Usage Statement - No '.callout-note' block.
+  overall_comments:
+    positive: One notable strength is the effort to implement structured data acquisition
+      functions, which demonstrates a solid understanding of organizing and automating
+      data workflows.
+    negative: One area where the submission could be improved is the completeness
+      of the analysis, particularly in the EDA and final deliverable sections.
+    advice: To improve the submission, the author should complete all required sections,
+      including EDA, population projections, and final insights, and add clear interpretations
+      of results. Incorporating visualizations and summary tables would also strengthen
+      the report.
+  scores:
+    Written Communication:
+      score: 6.0
+      comment: I gave this score because the writing is clear in the sections that
+        are present and provides a basic structure for the report. However, several
+        sections are incomplete, which limits the overall clarity and effectiveness
+        of the communication.
+    Project Skeleton:
+      score: 6.0
+      comment: I gave this score because the overall structure of the project is in
+        place and multiple required components have been started. However, some key
+        sections such as EDA and final deliverables are not fully completed.
+    Tables & Document Presentation:
+      score: 6.0
+      comment: I gave this score because there is some effort toward organizing the
+        document and structuring outputs. However, the project would benefit from
+        more fully developed tables and clearer presentation of key results.
+    Data Visualization:
+      score: 5.0
+      comment: I gave this score because there is limited evidence of visualization
+        work in the current submission. Adding more polished and clearly labeled visualizations
+        would improve the analysis.
+    Exploratory Data Analysis:
+      score: 5.0
+      comment: I gave this score because the foundation for EDA is present, but the
+        required questions are not fully addressed. Additional exploration and interpretation
+        are needed to strengthen this section.
+    Code Quality:
+      score: 7.0
+      comment: I gave this score because the code is generally well-structured and
+        uses appropriate functions and libraries. However, it is not fully integrated
+        into a complete analysis and could be refined further.
+    Data Preparation:
+      score: 7.0
+      comment: I gave this score because the data acquisition functions are implemented
+        and demonstrate a good understanding of the workflow. However, the preparation
+        is not fully carried through into a complete analysis.
+    Analysis and Findings:
+      score: 5.0
+      comment: I gave this score because some analytical components are present, but
+        the final insights and conclusions are not fully developed. The project would
+        benefit from completing the modeling and interpretation sections.
+    Extra Credit:
+      score: 0.0
+      comment: I am awarding 0 points because there is no clear attempt at the extra
+        credit portions of the assignment.
+  mp_number: 3
+evaluator: kiran1051998
+

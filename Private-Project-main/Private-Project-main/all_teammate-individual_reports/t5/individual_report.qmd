@@ -1,7 +1,7 @@
 ---
 title: "Citizen Complaints and Regulatory Response Speed"
 subtitle: "STA 9750 | Individual Report | Restaurant Complaints vs Inspection Risk in NYC"
-author: "Group Member 5"
+author: "Kiran Narsipur"
 date: "2026-05-12"
 format:
   html:
@@ -64,6 +64,8 @@ not only confirm that 311 is an active regulatory input but would also provide a
 partial explanation for the cross-sectional associations documented by my teammates,
 since more frequent inspections in high-complaint areas would naturally produce more
 opportunities to identify and record violations.
+
+Published web version: [https://carmine-montaperto.github.io/STA9750-2026-SPRING/individual_report.html](https://carmine-montaperto.github.io/STA9750-2026-SPRING/individual_report.html)
 
 ---
 
